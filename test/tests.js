@@ -10,7 +10,7 @@ if (typeof exports != "undefined") {
 
 test("this\n", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -52,7 +52,7 @@ test("this\n", {
 
 test("null\n", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -95,7 +95,7 @@ test("null\n", {
 
 test("\n    42\n\n", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -138,7 +138,7 @@ test("\n    42\n\n", {
 
 test("(1 + 2 ) * 3", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -237,7 +237,7 @@ test("(1 + 2 ) * 3", {
 
 test("x = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -308,7 +308,7 @@ test("x = []", {
 
 test("x = [ ]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -379,7 +379,7 @@ test("x = [ ]", {
 
 test("x = [ 42 ]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -465,7 +465,7 @@ test("x = [ 42 ]", {
 
 test("x = [ 42, ]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -551,7 +551,7 @@ test("x = [ 42, ]", {
 
 test("x = [ ,, 42 ]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -639,7 +639,7 @@ test("x = [ ,, 42 ]", {
 
 test("x = [ 1, 2, 3, ]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -753,7 +753,7 @@ test("x = [ 1, 2, 3, ]", {
 
 test("x = [ 1, 2,, 3, ]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -868,7 +868,7 @@ test("x = [ 1, 2,, 3, ]", {
 
 test("日本語 = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -939,7 +939,7 @@ test("日本語 = []", {
 
 test("T‿ = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1010,7 +1010,7 @@ test("T‿ = []", {
 
 test("T‌ = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1081,7 +1081,7 @@ test("T‌ = []", {
 
 test("T‍ = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1152,7 +1152,7 @@ test("T‍ = []", {
 
 test("ⅣⅡ = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1223,7 +1223,7 @@ test("ⅣⅡ = []", {
 
 test("ⅣⅡ = []", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1294,7 +1294,7 @@ test("ⅣⅡ = []", {
 
 test("x = {}", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1365,7 +1365,7 @@ test("x = {}", {
 
 test("x = { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1436,7 +1436,7 @@ test("x = { }", {
 
 test("x = { answer: 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1540,7 +1540,7 @@ test("x = { answer: 42 }", {
 
 test("x = { if: 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1644,7 +1644,7 @@ test("x = { if: 42 }", {
 
 test("x = { true: 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1748,7 +1748,7 @@ test("x = { true: 42 }", {
 
 test("x = { false: 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1852,7 +1852,7 @@ test("x = { false: 42 }", {
 
 test("x = { null: 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -1956,7 +1956,7 @@ test("x = { null: 42 }", {
 
 test("x = { \"answer\": 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2060,7 +2060,7 @@ test("x = { \"answer\": 42 }", {
 
 test("x = { x: 1, x: 2 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2196,7 +2196,7 @@ test("x = { x: 1, x: 2 }", {
 
 test("x = { get width() { return m_width } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2242,7 +2242,7 @@ test("x = { get width() { return m_width } }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ReturnStatement",
                       argument: {
@@ -2343,7 +2343,7 @@ test("x = { get width() { return m_width } }", {
 
 test("x = { get undef() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2389,7 +2389,7 @@ test("x = { get undef() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -2462,7 +2462,7 @@ test("x = { get undef() {} }", {
 
 test("x = { get if() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2508,7 +2508,7 @@ test("x = { get if() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -2581,7 +2581,7 @@ test("x = { get if() {} }", {
 
 test("x = { get true() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2627,7 +2627,7 @@ test("x = { get true() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -2700,7 +2700,7 @@ test("x = { get true() {} }", {
 
 test("x = { get false() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2746,7 +2746,7 @@ test("x = { get false() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -2819,7 +2819,7 @@ test("x = { get false() {} }", {
 
 test("x = { get null() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2865,7 +2865,7 @@ test("x = { get null() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -2938,7 +2938,7 @@ test("x = { get null() {} }", {
 
 test("x = { get \"undef\"() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -2984,7 +2984,7 @@ test("x = { get \"undef\"() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -3057,7 +3057,7 @@ test("x = { get \"undef\"() {} }", {
 
 test("x = { get 10() {} }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -3103,7 +3103,7 @@ test("x = { get 10() {} }", {
                 params: [],
                 body: {
                   type: "BlockStatement",
-                  body: [],
+                  bodylist: [],
                   loc: {
                     start: {
                       line: 1,
@@ -3176,7 +3176,7 @@ test("x = { get 10() {} }", {
 
 test("x = { set width(w) { m_width = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -3237,7 +3237,7 @@ test("x = { set width(w) { m_width = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -3366,7 +3366,7 @@ test("x = { set width(w) { m_width = w } }", {
 
 test("x = { set if(w) { m_if = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -3427,7 +3427,7 @@ test("x = { set if(w) { m_if = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -3556,7 +3556,7 @@ test("x = { set if(w) { m_if = w } }", {
 
 test("x = { set true(w) { m_true = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -3617,7 +3617,7 @@ test("x = { set true(w) { m_true = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -3746,7 +3746,7 @@ test("x = { set true(w) { m_true = w } }", {
 
 test("x = { set false(w) { m_false = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -3807,7 +3807,7 @@ test("x = { set false(w) { m_false = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -3936,7 +3936,7 @@ test("x = { set false(w) { m_false = w } }", {
 
 test("x = { set null(w) { m_null = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -3997,7 +3997,7 @@ test("x = { set null(w) { m_null = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -4126,7 +4126,7 @@ test("x = { set null(w) { m_null = w } }", {
 
 test("x = { set \"null\"(w) { m_null = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4187,7 +4187,7 @@ test("x = { set \"null\"(w) { m_null = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -4316,7 +4316,7 @@ test("x = { set \"null\"(w) { m_null = w } }", {
 
 test("x = { set 10(w) { m_null = w } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4377,7 +4377,7 @@ test("x = { set 10(w) { m_null = w } }", {
                 ],
                 body: {
                   type: "BlockStatement",
-                  body: [
+                  bodylist: [
                     {
                       type: "ExpressionStatement",
                       expression: {
@@ -4506,7 +4506,7 @@ test("x = { set 10(w) { m_null = w } }", {
 
 test("x = { get: 42 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4610,7 +4610,7 @@ test("x = { get: 42 }", {
 
 test("x = { set: 43 }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4714,7 +4714,7 @@ test("x = { set: 43 }", {
 
 test("/* block comment */ 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4757,7 +4757,7 @@ test("/* block comment */ 42", {
 
 test("42 /*The*/ /*Answer*/", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4800,7 +4800,7 @@ test("42 /*The*/ /*Answer*/", {
 
 test("42 /*the*/ /*answer*/", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4843,7 +4843,7 @@ test("42 /*the*/ /*answer*/", {
 
 test("/* multiline\ncomment\nshould\nbe\nignored */ 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4886,7 +4886,7 @@ test("/* multiline\ncomment\nshould\nbe\nignored */ 42", {
 
 test("/*a\r\nb*/ 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4929,7 +4929,7 @@ test("/*a\r\nb*/ 42", {
 
 test("/*a\rb*/ 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -4972,7 +4972,7 @@ test("/*a\rb*/ 42", {
 
 test("/*a\nb*/ 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5015,7 +5015,7 @@ test("/*a\nb*/ 42", {
 
 test("/*a\nc*/ 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5058,7 +5058,7 @@ test("/*a\nc*/ 42", {
 
 test("// line comment\n42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5101,7 +5101,7 @@ test("// line comment\n42", {
 
 test("42 // line comment", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5144,7 +5144,7 @@ test("42 // line comment", {
 
 test("// Hello, world!\n42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5187,7 +5187,7 @@ test("// Hello, world!\n42", {
 
 test("// Hello, world!\n", {
   type: "Program",
-  body: [],
+  bodylist: [],
   loc: {
     start: {
       line: 2,
@@ -5202,7 +5202,7 @@ test("// Hello, world!\n", {
 
 test("// Hallo, world!\n", {
   type: "Program",
-  body: [],
+  bodylist: [],
   loc: {
     start: {
       line: 2,
@@ -5217,7 +5217,7 @@ test("// Hallo, world!\n", {
 
 test("//\n42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5260,7 +5260,7 @@ test("//\n42", {
 
 test("//", {
   type: "Program",
-  body: [],
+  bodylist: [],
   loc: {
     start: {
       line: 1,
@@ -5275,7 +5275,7 @@ test("//", {
 
 test("// ", {
   type: "Program",
-  body: [],
+  bodylist: [],
   loc: {
     start: {
       line: 1,
@@ -5290,7 +5290,7 @@ test("// ", {
 
 test("/**/42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5333,7 +5333,7 @@ test("/**/42", {
 
 test("// Hello, world!\n\n//   Another hello\n42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5376,7 +5376,7 @@ test("// Hello, world!\n\n//   Another hello\n42", {
 
 test("if (x) { // Some comment\ndoThat(); }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       test: {
@@ -5395,7 +5395,7 @@ test("if (x) { // Some comment\ndoThat(); }", {
       },
       consequent: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -5476,7 +5476,7 @@ test("if (x) { // Some comment\ndoThat(); }", {
 
 test("switch (answer) { case 42: /* perfect */ bingo() }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "SwitchStatement",
       discriminant: {
@@ -5591,7 +5591,7 @@ test("switch (answer) { case 42: /* perfect */ bingo() }", {
 
 test("0", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5634,7 +5634,7 @@ test("0", {
 
 test("3", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5677,7 +5677,7 @@ test("3", {
 
 test("5", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5720,7 +5720,7 @@ test("5", {
 
 test("42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5763,7 +5763,7 @@ test("42", {
 
 test(".14", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5806,7 +5806,7 @@ test(".14", {
 
 test("3.14159", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5849,7 +5849,7 @@ test("3.14159", {
 
 test("6.02214179e+23", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5892,7 +5892,7 @@ test("6.02214179e+23", {
 
 test("1.492417830e-10", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5935,7 +5935,7 @@ test("1.492417830e-10", {
 
 test("0x0", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -5978,7 +5978,7 @@ test("0x0", {
 
 test("0e+100", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6021,7 +6021,7 @@ test("0e+100", {
 
 test("0xabc", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6064,7 +6064,7 @@ test("0xabc", {
 
 test("0xdef", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6107,7 +6107,7 @@ test("0xdef", {
 
 test("0X1A", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6150,7 +6150,7 @@ test("0X1A", {
 
 test("0x10", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6193,7 +6193,7 @@ test("0x10", {
 
 test("0x100", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6236,7 +6236,7 @@ test("0x100", {
 
 test("0X04", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6279,7 +6279,7 @@ test("0X04", {
 
 test("02", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6322,7 +6322,7 @@ test("02", {
 
 test("012", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6365,7 +6365,7 @@ test("012", {
 
 test("0012", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6408,7 +6408,7 @@ test("0012", {
 
 test("\"Hello\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6451,7 +6451,7 @@ test("\"Hello\"", {
 
 test("\"\\n\\r\\t\\v\\b\\f\\\\\\'\\\"\\0\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6494,7 +6494,7 @@ test("\"\\n\\r\\t\\v\\b\\f\\\\\\'\\\"\\0\"", {
 
 test("\"\\u0061\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6537,7 +6537,7 @@ test("\"\\u0061\"", {
 
 test("\"\\x61\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6580,7 +6580,7 @@ test("\"\\x61\"", {
 
 test("\"Hello\\nworld\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6623,7 +6623,7 @@ test("\"Hello\\nworld\"", {
 
 test("\"Hello\\\nworld\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6666,7 +6666,7 @@ test("\"Hello\\\nworld\"", {
 
 test("\"Hello\\02World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6709,7 +6709,7 @@ test("\"Hello\\02World\"", {
 
 test("\"Hello\\012World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6752,7 +6752,7 @@ test("\"Hello\\012World\"", {
 
 test("\"Hello\\122World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6795,7 +6795,7 @@ test("\"Hello\\122World\"", {
 
 test("\"Hello\\0122World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6838,7 +6838,7 @@ test("\"Hello\\0122World\"", {
 
 test("\"Hello\\312World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6881,7 +6881,7 @@ test("\"Hello\\312World\"", {
 
 test("\"Hello\\412World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6924,7 +6924,7 @@ test("\"Hello\\412World\"", {
 
 test("\"Hello\\812World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -6967,7 +6967,7 @@ test("\"Hello\\812World\"", {
 
 test("\"Hello\\712World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7010,7 +7010,7 @@ test("\"Hello\\712World\"", {
 
 test("\"Hello\\0World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7053,7 +7053,7 @@ test("\"Hello\\0World\"", {
 
 test("\"Hello\\\r\nworld\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7096,7 +7096,7 @@ test("\"Hello\\\r\nworld\"", {
 
 test("\"Hello\\1World\"", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7139,7 +7139,7 @@ test("\"Hello\\1World\"", {
 
 test("var x = /[a-z]/i", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7212,7 +7212,7 @@ test("var x = /[a-z]/i", {
 
 test("var x = /[x-z]/i", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7285,7 +7285,7 @@ test("var x = /[x-z]/i", {
 
 test("var x = /[a-c]/i", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7358,7 +7358,7 @@ test("var x = /[a-c]/i", {
 
 test("var x = /[P QR]/i", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7431,7 +7431,7 @@ test("var x = /[P QR]/i", {
 
 test("var x = /foo\\/bar/", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7504,7 +7504,7 @@ test("var x = /foo\\/bar/", {
 
 test("var x = /=([^=\\s])+/g", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7577,7 +7577,7 @@ test("var x = /=([^=\\s])+/g", {
 
 test("var x = /[P QR]/\\u0067", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -7650,7 +7650,7 @@ test("var x = /[P QR]/\\u0067", {
 
 test("new Button", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7707,7 +7707,7 @@ test("new Button", {
 
 test("new Button()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7764,7 +7764,7 @@ test("new Button()", {
 
 test("new new foo", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7835,7 +7835,7 @@ test("new new foo", {
 
 test("new new foo()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -7906,7 +7906,7 @@ test("new new foo()", {
 
 test("new foo().bar()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8005,7 +8005,7 @@ test("new foo().bar()", {
 
 test("new foo[bar]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8090,7 +8090,7 @@ test("new foo[bar]", {
 
 test("new foo.bar()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8175,7 +8175,7 @@ test("new foo.bar()", {
 
 test("( new foo).bar()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8274,7 +8274,7 @@ test("( new foo).bar()", {
 
 test("foo(bar, baz)", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8360,7 +8360,7 @@ test("foo(bar, baz)", {
 
 test("(    foo  )()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8417,7 +8417,7 @@ test("(    foo  )()", {
 
 test("universe.milkyway", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8488,7 +8488,7 @@ test("universe.milkyway", {
 
 test("universe.milkyway.solarsystem", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8587,7 +8587,7 @@ test("universe.milkyway.solarsystem", {
 
 test("universe.milkyway.solarsystem.Earth", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8714,7 +8714,7 @@ test("universe.milkyway.solarsystem.Earth", {
 
 test("universe[galaxyName, otherUselessName]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8814,7 +8814,7 @@ test("universe[galaxyName, otherUselessName]", {
 
 test("universe[galaxyName]", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8885,7 +8885,7 @@ test("universe[galaxyName]", {
 
 test("universe[42].galaxies", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8984,7 +8984,7 @@ test("universe[42].galaxies", {
 
 test("universe(42).galaxies", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9084,7 +9084,7 @@ test("universe(42).galaxies", {
 
 test("universe(42).galaxies(14, 3, 77).milkyway", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9269,7 +9269,7 @@ test("universe(42).galaxies(14, 3, 77).milkyway", {
 
 test("earth.asia.Indonesia.prepareForElection(2014)", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9425,7 +9425,7 @@ test("earth.asia.Indonesia.prepareForElection(2014)", {
 
 test("universe.if", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9496,7 +9496,7 @@ test("universe.if", {
 
 test("universe.true", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9567,7 +9567,7 @@ test("universe.true", {
 
 test("universe.false", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9638,7 +9638,7 @@ test("universe.false", {
 
 test("universe.null", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9709,7 +9709,7 @@ test("universe.null", {
 
 test("x++", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9767,7 +9767,7 @@ test("x++", {
 
 test("x--", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9825,7 +9825,7 @@ test("x--", {
 
 test("eval++", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9883,7 +9883,7 @@ test("eval++", {
 
 test("eval--", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9941,7 +9941,7 @@ test("eval--", {
 
 test("arguments++", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -9999,7 +9999,7 @@ test("arguments++", {
 
 test("arguments--", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10057,7 +10057,7 @@ test("arguments--", {
 
 test("++x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10115,7 +10115,7 @@ test("++x", {
 
 test("--x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10173,7 +10173,7 @@ test("--x", {
 
 test("++eval", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10231,7 +10231,7 @@ test("++eval", {
 
 test("--eval", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10289,7 +10289,7 @@ test("--eval", {
 
 test("++arguments", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10347,7 +10347,7 @@ test("++arguments", {
 
 test("--arguments", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10405,7 +10405,7 @@ test("--arguments", {
 
 test("+x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10463,7 +10463,7 @@ test("+x", {
 
 test("-x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10521,7 +10521,7 @@ test("-x", {
 
 test("~x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10579,7 +10579,7 @@ test("~x", {
 
 test("!x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10637,7 +10637,7 @@ test("!x", {
 
 test("void x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10695,7 +10695,7 @@ test("void x", {
 
 test("delete x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10753,7 +10753,7 @@ test("delete x", {
 
 test("typeof x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10811,7 +10811,7 @@ test("typeof x", {
 
 test("x * y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10882,7 +10882,7 @@ test("x * y", {
 
 test("x / y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -10953,7 +10953,7 @@ test("x / y", {
 
 test("x % y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11024,7 +11024,7 @@ test("x % y", {
 
 test("x + y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11095,7 +11095,7 @@ test("x + y", {
 
 test("x - y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11166,7 +11166,7 @@ test("x - y", {
 
 test("x << y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11237,7 +11237,7 @@ test("x << y", {
 
 test("x >> y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11308,7 +11308,7 @@ test("x >> y", {
 
 test("x >>> y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11379,7 +11379,7 @@ test("x >>> y", {
 
 test("x < y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11450,7 +11450,7 @@ test("x < y", {
 
 test("x > y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11521,7 +11521,7 @@ test("x > y", {
 
 test("x <= y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11592,7 +11592,7 @@ test("x <= y", {
 
 test("x >= y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11663,7 +11663,7 @@ test("x >= y", {
 
 test("x in y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11734,7 +11734,7 @@ test("x in y", {
 
 test("x instanceof y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11805,7 +11805,7 @@ test("x instanceof y", {
 
 test("x < y < z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11904,7 +11904,7 @@ test("x < y < z", {
 
 test("x == y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -11975,7 +11975,7 @@ test("x == y", {
 
 test("x != y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12046,7 +12046,7 @@ test("x != y", {
 
 test("x === y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12117,7 +12117,7 @@ test("x === y", {
 
 test("x !== y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12188,7 +12188,7 @@ test("x !== y", {
 
 test("x & y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12259,7 +12259,7 @@ test("x & y", {
 
 test("x ^ y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12330,7 +12330,7 @@ test("x ^ y", {
 
 test("x | y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12401,7 +12401,7 @@ test("x | y", {
 
 test("x + y + z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12500,7 +12500,7 @@ test("x + y + z", {
 
 test("x - y + z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12599,7 +12599,7 @@ test("x - y + z", {
 
 test("x + y - z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12698,7 +12698,7 @@ test("x + y - z", {
 
 test("x - y - z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12797,7 +12797,7 @@ test("x - y - z", {
 
 test("x + y * z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12896,7 +12896,7 @@ test("x + y * z", {
 
 test("x + y / z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -12995,7 +12995,7 @@ test("x + y / z", {
 
 test("x - y % z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13094,7 +13094,7 @@ test("x - y % z", {
 
 test("x * y * z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13193,7 +13193,7 @@ test("x * y * z", {
 
 test("x * y / z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13292,7 +13292,7 @@ test("x * y / z", {
 
 test("x * y % z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13391,7 +13391,7 @@ test("x * y % z", {
 
 test("x % y * z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13490,7 +13490,7 @@ test("x % y * z", {
 
 test("x << y << z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13589,7 +13589,7 @@ test("x << y << z", {
 
 test("x | y | z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13688,7 +13688,7 @@ test("x | y | z", {
 
 test("x & y & z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13787,7 +13787,7 @@ test("x & y & z", {
 
 test("x ^ y ^ z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13886,7 +13886,7 @@ test("x ^ y ^ z", {
 
 test("x & y | z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -13985,7 +13985,7 @@ test("x & y | z", {
 
 test("x | y ^ z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14084,7 +14084,7 @@ test("x | y ^ z", {
 
 test("x | y & z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14183,7 +14183,7 @@ test("x | y & z", {
 
 test("x || y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14254,7 +14254,7 @@ test("x || y", {
 
 test("x && y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14325,7 +14325,7 @@ test("x && y", {
 
 test("x || y || z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14424,7 +14424,7 @@ test("x || y || z", {
 
 test("x && y && z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14523,7 +14523,7 @@ test("x && y && z", {
 
 test("x || y && z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14622,7 +14622,7 @@ test("x || y && z", {
 
 test("x || y ^ z", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14721,7 +14721,7 @@ test("x || y ^ z", {
 
 test("y ? 1 : 2", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14805,7 +14805,7 @@ test("y ? 1 : 2", {
 
 test("x && y ? 1 : 2", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14917,7 +14917,7 @@ test("x && y ? 1 : 2", {
 
 test("x = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -14988,7 +14988,7 @@ test("x = 42", {
 
 test("eval = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15059,7 +15059,7 @@ test("eval = 42", {
 
 test("arguments = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15130,7 +15130,7 @@ test("arguments = 42", {
 
 test("x *= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15201,7 +15201,7 @@ test("x *= 42", {
 
 test("x /= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15272,7 +15272,7 @@ test("x /= 42", {
 
 test("x %= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15343,7 +15343,7 @@ test("x %= 42", {
 
 test("x += 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15414,7 +15414,7 @@ test("x += 42", {
 
 test("x -= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15485,7 +15485,7 @@ test("x -= 42", {
 
 test("x <<= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15556,7 +15556,7 @@ test("x <<= 42", {
 
 test("x >>= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15627,7 +15627,7 @@ test("x >>= 42", {
 
 test("x >>>= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15698,7 +15698,7 @@ test("x >>>= 42", {
 
 test("x &= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15769,7 +15769,7 @@ test("x &= 42", {
 
 test("x ^= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15840,7 +15840,7 @@ test("x ^= 42", {
 
 test("x |= 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -15911,10 +15911,10 @@ test("x |= 42", {
 
 test("{ foo }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ExpressionStatement",
           expression: {
@@ -15969,10 +15969,10 @@ test("{ foo }", {
 
 test("{ doThis(); doThat(); }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ExpressionStatement",
           expression: {
@@ -16082,10 +16082,10 @@ test("{ doThis(); doThat(); }", {
 
 test("{}", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       loc: {
         start: {
           line: 1,
@@ -16112,7 +16112,7 @@ test("{}", {
 
 test("var x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16172,7 +16172,7 @@ test("var x", {
 
 test("var x, y;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16260,7 +16260,7 @@ test("var x, y;", {
 
 test("var x = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16333,7 +16333,7 @@ test("var x = 42", {
 
 test("var eval = 42, arguments = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16447,7 +16447,7 @@ test("var eval = 42, arguments = 42", {
 
 test("var x = 14, y = 3, z = 1977", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16602,7 +16602,7 @@ test("var x = 14, y = 3, z = 1977", {
 
 test("var implements, interface, package", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16718,7 +16718,7 @@ test("var implements, interface, package", {
 
 test("var private, protected, public, static", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -16862,7 +16862,7 @@ test("var private, protected, public, static", {
 
 test(";", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "EmptyStatement",
       loc: {
@@ -16891,7 +16891,7 @@ test(";", {
 
 test("x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -16934,7 +16934,7 @@ test("x", {
 
 test("x, y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -17006,7 +17006,7 @@ test("x, y", {
 
 test("\\u0061", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -17049,7 +17049,7 @@ test("\\u0061", {
 
 test("a\\u0061", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -17092,7 +17092,7 @@ test("a\\u0061", {
 
 test("if (morning) goodMorning()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       test: {
@@ -17177,7 +17177,7 @@ test("if (morning) goodMorning()", {
 
 test("if (morning) (function(){})", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       test: {
@@ -17202,7 +17202,7 @@ test("if (morning) (function(){})", {
           params: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             loc: {
               start: {
                 line: 1,
@@ -17263,7 +17263,7 @@ test("if (morning) (function(){})", {
 
 test("if (morning) var x = 0;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       test: {
@@ -17364,7 +17364,7 @@ test("if (morning) var x = 0;", {
 
 test("if (morning) function a(){}", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       test: {
@@ -17400,7 +17400,7 @@ test("if (morning) function a(){}", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           loc: {
             start: {
               line: 1,
@@ -17450,7 +17450,7 @@ test("if (morning) function a(){}", {
 
 test("if (morning) goodMorning(); else goodDay()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       test: {
@@ -17575,7 +17575,7 @@ test("if (morning) goodMorning(); else goodDay()", {
 
 test("do keep(); while (true)", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "DoWhileStatement",
       body: {
@@ -17659,7 +17659,7 @@ test("do keep(); while (true)", {
 
 test("do keep(); while (true);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "DoWhileStatement",
       body: {
@@ -17743,12 +17743,12 @@ test("do keep(); while (true);", {
 
 test("do { x++; y--; } while (x < 10)", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "DoWhileStatement",
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -17913,15 +17913,15 @@ test("do { x++; y--; } while (x < 10)", {
 
 test("{ do { } while (false);false }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "DoWhileStatement",
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             loc: {
               start: {
                 line: 1,
@@ -18012,7 +18012,7 @@ test("{ do { } while (false);false }", {
 
 test("while (true) doSomething()", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -18096,7 +18096,7 @@ test("while (true) doSomething()", {
 
 test("while (x < 10) { x++; y--; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -18143,7 +18143,7 @@ test("while (x < 10) { x++; y--; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -18266,7 +18266,7 @@ test("while (x < 10) { x++; y--; }", {
 
 test("for(;;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: null,
@@ -18311,7 +18311,7 @@ test("for(;;);", {
 
 test("for(;;){}", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: null,
@@ -18319,7 +18319,7 @@ test("for(;;){}", {
       update: null,
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -18357,7 +18357,7 @@ test("for(;;){}", {
 
 test("for(x = 0;;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -18443,7 +18443,7 @@ test("for(x = 0;;);", {
 
 test("for(var x = 0;;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -18544,7 +18544,7 @@ test("for(var x = 0;;);", {
 
 test("for(var x = 0, y = 1;;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -18686,7 +18686,7 @@ test("for(var x = 0, y = 1;;);", {
 
 test("for(x = 0; x < 42;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -18813,7 +18813,7 @@ test("for(x = 0; x < 42;);", {
 
 test("for(x = 0; x < 42; x++);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -18968,7 +18968,7 @@ test("for(x = 0; x < 42; x++);", {
 
 test("for(x = 0; x < 42; x++) process(x);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -19166,7 +19166,7 @@ test("for(x = 0; x < 42; x++) process(x);", {
 
 test("for(x in list) process(x);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForInStatement",
       left: {
@@ -19279,7 +19279,7 @@ test("for(x in list) process(x);", {
 
 test("for (var x in list) process(x);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForInStatement",
       left: {
@@ -19422,7 +19422,7 @@ test("for (var x in list) process(x);", {
 
 test("for (var x = 42 in list) process(x);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForInStatement",
       left: {
@@ -19578,7 +19578,7 @@ test("for (var x = 42 in list) process(x);", {
 
 test("for (var i = function() { return 10 in [] } in list) process(x);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForInStatement",
       left: {
@@ -19606,7 +19606,7 @@ test("for (var i = function() { return 10 in [] } in list) process(x);", {
               params: [],
               body: {
                 type: "BlockStatement",
-                body: [
+                bodylist: [
                   {
                     type: "ReturnStatement",
                     argument: {
@@ -19805,7 +19805,7 @@ test("for (var i = function() { return 10 in [] } in list) process(x);", {
 
 test("while (true) { continue; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -19824,7 +19824,7 @@ test("while (true) { continue; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ContinueStatement",
             label: null,
@@ -19877,7 +19877,7 @@ test("while (true) { continue; }", {
 
 test("while (true) { continue }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -19896,7 +19896,7 @@ test("while (true) { continue }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ContinueStatement",
             label: null,
@@ -19949,7 +19949,7 @@ test("while (true) { continue }", {
 
 test("done: while (true) { continue done }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -19970,7 +19970,7 @@ test("done: while (true) { continue done }", {
         },
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ContinueStatement",
               label: {
@@ -20061,7 +20061,7 @@ test("done: while (true) { continue done }", {
 
 test("done: while (true) { continue done; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -20082,7 +20082,7 @@ test("done: while (true) { continue done; }", {
         },
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ContinueStatement",
               label: {
@@ -20173,7 +20173,7 @@ test("done: while (true) { continue done; }", {
 
 test("while (true) { break }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -20192,7 +20192,7 @@ test("while (true) { break }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "BreakStatement",
             label: null,
@@ -20245,7 +20245,7 @@ test("while (true) { break }", {
 
 test("done: while (true) { break done }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -20266,7 +20266,7 @@ test("done: while (true) { break done }", {
         },
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "BreakStatement",
               label: {
@@ -20357,7 +20357,7 @@ test("done: while (true) { break done }", {
 
 test("done: while (true) { break done; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -20378,7 +20378,7 @@ test("done: while (true) { break done; }", {
         },
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "BreakStatement",
               label: {
@@ -20469,7 +20469,7 @@ test("done: while (true) { break done; }", {
 
 test("(function(){ return })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -20478,7 +20478,7 @@ test("(function(){ return })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: null,
@@ -20542,7 +20542,7 @@ test("(function(){ return })", {
 
 test("(function(){ return; })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -20551,7 +20551,7 @@ test("(function(){ return; })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: null,
@@ -20615,7 +20615,7 @@ test("(function(){ return; })", {
 
 test("(function(){ return x; })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -20624,7 +20624,7 @@ test("(function(){ return x; })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: {
@@ -20701,7 +20701,7 @@ test("(function(){ return x; })", {
 
 test("(function(){ return x * y })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -20710,7 +20710,7 @@ test("(function(){ return x * y })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: {
@@ -20815,7 +20815,7 @@ test("(function(){ return x * y })", {
 
 test("with (x) foo = bar", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WithStatement",
       object: {
@@ -20913,7 +20913,7 @@ test("with (x) foo = bar", {
 
 test("with (x) foo = bar;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WithStatement",
       object: {
@@ -21011,7 +21011,7 @@ test("with (x) foo = bar;", {
 
 test("with (x) { foo = bar }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WithStatement",
       object: {
@@ -21030,7 +21030,7 @@ test("with (x) { foo = bar }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -21124,7 +21124,7 @@ test("with (x) { foo = bar }", {
 
 test("switch (x) {}", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "SwitchStatement",
       discriminant: {
@@ -21168,7 +21168,7 @@ test("switch (x) {}", {
 
 test("switch (answer) { case 42: hi(); break; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "SwitchStatement",
       discriminant: {
@@ -21297,7 +21297,7 @@ test("switch (answer) { case 42: hi(); break; }", {
 
 test("switch (answer) { case 42: hi(); break; default: break }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "SwitchStatement",
       discriminant: {
@@ -21456,7 +21456,7 @@ test("switch (answer) { case 42: hi(); break; default: break }", {
 
 test("start: for (;;) break start", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -21542,7 +21542,7 @@ test("start: for (;;) break start", {
 
 test("start: while (true) break start", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -21639,7 +21639,7 @@ test("start: while (true) break start", {
 
 test("throw x;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ThrowStatement",
       argument: {
@@ -21682,7 +21682,7 @@ test("throw x;", {
 
 test("throw x * y", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ThrowStatement",
       argument: {
@@ -21753,7 +21753,7 @@ test("throw x * y", {
 
 test("throw { message: \"Error\" }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ThrowStatement",
       argument: {
@@ -21829,12 +21829,12 @@ test("throw { message: \"Error\" }", {
 
 test("try { } catch (e) { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -21865,7 +21865,7 @@ test("try { } catch (e) { }", {
           guard: null,
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             loc: {
               start: {
                 line: 1,
@@ -21916,12 +21916,12 @@ test("try { } catch (e) { }", {
 
 test("try { } catch (eval) { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -21953,7 +21953,7 @@ test("try { } catch (eval) { }", {
           guard: null,
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             loc: {
               start: {
                 line: 1,
@@ -22004,12 +22004,12 @@ test("try { } catch (eval) { }", {
 
 test("try { } catch (arguments) { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -22041,7 +22041,7 @@ test("try { } catch (arguments) { }", {
           guard: null,
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             loc: {
               start: {
                 line: 1,
@@ -22092,12 +22092,12 @@ test("try { } catch (arguments) { }", {
 
 test("try { } catch (e) { say(e) }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -22129,7 +22129,7 @@ test("try { } catch (e) { say(e) }", {
           guard: null,
           body: {
             type: "BlockStatement",
-            body: [
+            bodylist: [
               {
                 type: "ExpressionStatement",
                 expression: {
@@ -22237,12 +22237,12 @@ test("try { } catch (e) { say(e) }", {
 
 test("try { } finally { cleanup(stuff) }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -22257,7 +22257,7 @@ test("try { } finally { cleanup(stuff) }", {
       handler: null,
       finalizer: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -22352,12 +22352,12 @@ test("try { } finally { cleanup(stuff) }", {
 
 test("try { doThat(); } catch (e) { say(e) }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -22431,7 +22431,7 @@ test("try { doThat(); } catch (e) { say(e) }", {
           guard: null,
           body: {
             type: "BlockStatement",
-            body: [
+            bodylist: [
               {
                 type: "ExpressionStatement",
                 expression: {
@@ -22539,12 +22539,12 @@ test("try { doThat(); } catch (e) { say(e) }", {
 
 test("try { doThat(); } catch (e) { say(e) } finally { cleanup(stuff) }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "TryStatement",
       block: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -22618,7 +22618,7 @@ test("try { doThat(); } catch (e) { say(e) } finally { cleanup(stuff) }", {
           guard: null,
           body: {
             type: "BlockStatement",
-            body: [
+            bodylist: [
               {
                 type: "ExpressionStatement",
                 expression: {
@@ -22701,7 +22701,7 @@ test("try { doThat(); } catch (e) { say(e) } finally { cleanup(stuff) }", {
       ,
       finalizer: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -22796,7 +22796,7 @@ test("try { doThat(); } catch (e) { say(e) } finally { cleanup(stuff) }", {
 
 test("debugger;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "DebuggerStatement",
       loc: {
@@ -22825,7 +22825,7 @@ test("debugger;", {
 
 test("function hello() { sayHi(); }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -22845,7 +22845,7 @@ test("function hello() { sayHi(); }", {
       params: [],
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -22925,7 +22925,7 @@ test("function hello() { sayHi(); }", {
 
 test("function eval() { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -22945,7 +22945,7 @@ test("function eval() { }", {
       params: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -22983,7 +22983,7 @@ test("function eval() { }", {
 
 test("function arguments() { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23003,7 +23003,7 @@ test("function arguments() { }", {
       params: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -23041,7 +23041,7 @@ test("function arguments() { }", {
 
 test("function test(t, t) { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23090,7 +23090,7 @@ test("function test(t, t) { }", {
       ],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -23128,7 +23128,7 @@ test("function test(t, t) { }", {
 
 test("(function test(t, t) { })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -23179,7 +23179,7 @@ test("(function test(t, t) { })", {
         ],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           loc: {
             start: {
               line: 1,
@@ -23228,7 +23228,7 @@ test("(function test(t, t) { })", {
 
 test("function eval() { function inner() { \"use strict\" } }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23248,7 +23248,7 @@ test("function eval() { function inner() { \"use strict\" } }", {
       params: [],
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "FunctionDeclaration",
             id: {
@@ -23268,7 +23268,7 @@ test("function eval() { function inner() { \"use strict\" } }", {
             params: [],
             body: {
               type: "BlockStatement",
-              body: [
+              bodylist: [
                 {
                   type: "ExpressionStatement",
                   expression: {
@@ -23357,7 +23357,7 @@ test("function eval() { function inner() { \"use strict\" } }", {
 
 test("function hello(a) { sayHi(); }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23392,7 +23392,7 @@ test("function hello(a) { sayHi(); }", {
       ],
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -23472,7 +23472,7 @@ test("function hello(a) { sayHi(); }", {
 
 test("function hello(a, b) { sayHi(); }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23521,7 +23521,7 @@ test("function hello(a, b) { sayHi(); }", {
       ],
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -23601,7 +23601,7 @@ test("function hello(a, b) { sayHi(); }", {
 
 test("function hello(...rest) { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23635,7 +23635,7 @@ test("function hello(...rest) { }", {
       },
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -23676,7 +23676,7 @@ test("function hello(...rest) { }", {
 
 test("function hello(a, ...rest) { }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "FunctionDeclaration",
       id: {
@@ -23725,7 +23725,7 @@ test("function hello(a, ...rest) { }", {
       },
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         loc: {
           start: {
             line: 1,
@@ -23766,7 +23766,7 @@ test("function hello(a, ...rest) { }", {
 
 test("var hi = function() { sayHi() };", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -23792,7 +23792,7 @@ test("var hi = function() { sayHi() };", {
             params: [],
             body: {
               type: "BlockStatement",
-              body: [
+              bodylist: [
                 {
                   type: "ExpressionStatement",
                   expression: {
@@ -23896,7 +23896,7 @@ test("var hi = function() { sayHi() };", {
 
 test("var hi = function (...r) { sayHi() };", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -23936,7 +23936,7 @@ test("var hi = function (...r) { sayHi() };", {
             },
             body: {
               type: "BlockStatement",
-              body: [
+              bodylist: [
                 {
                   type: "ExpressionStatement",
                   expression: {
@@ -24043,7 +24043,7 @@ test("var hi = function (...r) { sayHi() };", {
 
 test("var hi = function eval() { };", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -24082,7 +24082,7 @@ test("var hi = function eval() { };", {
             params: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               loc: {
                 start: {
                   line: 1,
@@ -24144,7 +24144,7 @@ test("var hi = function eval() { };", {
 
 test("var hi = function arguments() { };", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -24183,7 +24183,7 @@ test("var hi = function arguments() { };", {
             params: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               loc: {
                 start: {
                   line: 1,
@@ -24245,7 +24245,7 @@ test("var hi = function arguments() { };", {
 
 test("var hello = function hi() { sayHi() };", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -24284,7 +24284,7 @@ test("var hello = function hi() { sayHi() };", {
             params: [],
             body: {
               type: "BlockStatement",
-              body: [
+              bodylist: [
                 {
                   type: "ExpressionStatement",
                   expression: {
@@ -24388,7 +24388,7 @@ test("var hello = function hi() { sayHi() };", {
 
 test("(function(){})", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -24397,7 +24397,7 @@ test("(function(){})", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           loc: {
             start: {
               line: 1,
@@ -24446,10 +24446,10 @@ test("(function(){})", {
 
 test("{ x\n++y }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ExpressionStatement",
           expression: {
@@ -24546,10 +24546,10 @@ test("{ x\n++y }", {
 
 test("{ x\n--y }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ExpressionStatement",
           expression: {
@@ -24646,7 +24646,7 @@ test("{ x\n--y }", {
 
 test("var x /* comment */;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -24706,10 +24706,10 @@ test("var x /* comment */;", {
 
 test("{ var x = 14, y = 3\nz; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "VariableDeclaration",
           declarations: [
@@ -24862,7 +24862,7 @@ test("{ var x = 14, y = 3\nz; }", {
 
 test("while (true) { continue\nthere; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -24881,7 +24881,7 @@ test("while (true) { continue\nthere; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ContinueStatement",
             label: null,
@@ -24961,7 +24961,7 @@ test("while (true) { continue\nthere; }", {
 
 test("while (true) { continue // Comment\nthere; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -24980,7 +24980,7 @@ test("while (true) { continue // Comment\nthere; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ContinueStatement",
             label: null,
@@ -25060,7 +25060,7 @@ test("while (true) { continue // Comment\nthere; }", {
 
 test("while (true) { continue /* Multiline\nComment */there; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -25079,7 +25079,7 @@ test("while (true) { continue /* Multiline\nComment */there; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ContinueStatement",
             label: null,
@@ -25159,7 +25159,7 @@ test("while (true) { continue /* Multiline\nComment */there; }", {
 
 test("while (true) { break\nthere; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -25178,7 +25178,7 @@ test("while (true) { break\nthere; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "BreakStatement",
             label: null,
@@ -25258,7 +25258,7 @@ test("while (true) { break\nthere; }", {
 
 test("while (true) { break // Comment\nthere; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -25277,7 +25277,7 @@ test("while (true) { break // Comment\nthere; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "BreakStatement",
             label: null,
@@ -25357,7 +25357,7 @@ test("while (true) { break // Comment\nthere; }", {
 
 test("while (true) { break /* Multiline\nComment */there; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "WhileStatement",
       test: {
@@ -25376,7 +25376,7 @@ test("while (true) { break /* Multiline\nComment */there; }", {
       },
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "BreakStatement",
             label: null,
@@ -25456,7 +25456,7 @@ test("while (true) { break /* Multiline\nComment */there; }", {
 
 test("(function(){ return\nx; })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -25465,7 +25465,7 @@ test("(function(){ return\nx; })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: null,
@@ -25556,7 +25556,7 @@ test("(function(){ return\nx; })", {
 
 test("(function(){ return // Comment\nx; })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -25565,7 +25565,7 @@ test("(function(){ return // Comment\nx; })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: null,
@@ -25656,7 +25656,7 @@ test("(function(){ return // Comment\nx; })", {
 
 test("(function(){ return/* Multiline\nComment */x; })", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -25665,7 +25665,7 @@ test("(function(){ return/* Multiline\nComment */x; })", {
         params: [],
         body: {
           type: "BlockStatement",
-          body: [
+          bodylist: [
             {
               type: "ReturnStatement",
               argument: null,
@@ -25756,10 +25756,10 @@ test("(function(){ return/* Multiline\nComment */x; })", {
 
 test("{ throw error\nerror; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ThrowStatement",
           argument: {
@@ -25841,10 +25841,10 @@ test("{ throw error\nerror; }", {
 
 test("{ throw error// Comment\nerror; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ThrowStatement",
           argument: {
@@ -25926,10 +25926,10 @@ test("{ throw error// Comment\nerror; }", {
 
 test("{ throw error/* Multiline\nComment */error; }", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ThrowStatement",
           argument: {
@@ -26011,7 +26011,7 @@ test("{ throw error/* Multiline\nComment */error; }", {
 
 test("", {
   type: "Program",
-  body: [],
+  bodylist: [],
   loc: {
     start: {
       line: 1,
@@ -26038,7 +26038,7 @@ test("foo: if (true) break foo;", {
       column: 25
     }
   },
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       start: 0,
@@ -26150,7 +26150,7 @@ test("(function () {\n 'use strict';\n '\0';\n}())", {
       column: 4
     }
   },
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       start: 0,
@@ -26208,7 +26208,7 @@ test("(function () {\n 'use strict';\n '\0';\n}())", {
                 column: 1
               }
             },
-            body: [
+            bodylist: [
               {
                 type: "ExpressionStatement",
                 start: 16,
@@ -26285,7 +26285,7 @@ test("123..toString(10)", {
   type: "Program",
   start: 0,
   end: 17,
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       start: 0,
@@ -26329,7 +26329,7 @@ test("123.+2", {
   type: "Program",
   start: 0,
   end: 6,
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       start: 0,
@@ -26360,7 +26360,7 @@ test("a\u2028b", {
   type: "Program",
   start: 0,
   end: 3,
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       start: 0,
@@ -26388,7 +26388,7 @@ test("a\u2028b", {
 
 test("'a\\u0026b'", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -26401,7 +26401,7 @@ test("'a\\u0026b'", {
 
 test("foo: 10; foo: 20;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "LabeledStatement",
       body: {
@@ -26439,7 +26439,7 @@ test("if(1)/  foo/", {
   type: "Program",
   start: 0,
   end: 12,
-  body: [
+  bodylist: [
     {
       type: "IfStatement",
       start: 0,
@@ -26469,7 +26469,7 @@ test("if(1)/  foo/", {
 
 test("price_9̶9̶_89", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -26499,7 +26499,7 @@ test("var a = 1;", {
     },
     source: "test.js"
   },
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       start: 0,
@@ -26578,7 +26578,7 @@ test("var a = 1;", {
 
 test("a.in / b", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -26607,10 +26607,10 @@ test("a.in / b", {
 
 test("{}/=/", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "BlockStatement",
-      body: []
+      bodylist: []
     },
     {
       type: "ExpressionStatement",
@@ -26626,7 +26626,7 @@ test("foo <!--bar\n+baz", {
   type: "Program",
   start: 0,
   end: 16,
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       start: 0,
@@ -26655,7 +26655,7 @@ test("foo <!--bar\n+baz", {
 
 test("x = y-->10;\n --> nothing", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -26689,7 +26689,7 @@ test("x = y-->10;\n --> nothing", {
 
 test("'use strict';\nobject.static();", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -27318,7 +27318,7 @@ test("let++", {
       column: 5
     }
   },
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       start: 0,
@@ -27374,7 +27374,7 @@ test("let++", {
 
 test("let x", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -27434,7 +27434,7 @@ test("let x", {
 
 test("let x, y;", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -27522,7 +27522,7 @@ test("let x, y;", {
 
 test("let x = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -27595,7 +27595,7 @@ test("let x = 42", {
 
 test("let eval = 42, arguments = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -27709,7 +27709,7 @@ test("let eval = 42, arguments = 42", {
 
 test("let x = 14, y = 3, z = 1977", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -27864,7 +27864,7 @@ test("let x = 14, y = 3, z = 1977", {
 
 test("for(let x = 0;;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -27965,7 +27965,7 @@ test("for(let x = 0;;);", {
 
 test("for(let x = 0, y = 1;;);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForStatement",
       init: {
@@ -28107,7 +28107,7 @@ test("for(let x = 0, y = 1;;);", {
 
 test("for (let x in list) process(x);", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ForInStatement",
       left: {
@@ -28250,7 +28250,7 @@ test("for (let x in list) process(x);", {
 
 test("const x = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -28323,7 +28323,7 @@ test("const x = 42", {
 
 test("const eval = 42, arguments = 42", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [
@@ -28437,7 +28437,7 @@ test("const eval = 42, arguments = 42", {
 
 test("const x = 14, y = 3, z = 1977", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "VariableDeclaration",
       declarations: [

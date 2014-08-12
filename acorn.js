@@ -21,6 +21,8 @@
 // [dammit]: acorn_loose.js
 // [walk]: util/walk.js
 "use strict";
+;
+
 exports.version = "0.6.1";
 
 // The main exported interface (under `self.acorn` when in the
@@ -31,13 +33,15 @@ exports.version = "0.6.1";
 // [api]: https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API
 var options, input, inputLen, sourceFile;
 
-exports.parse = function (inpt, opts) {
+function parse(inpt, opts) {
     input = String(inpt);
     inputLen = input.length;
     setOptions(opts);
     initTokenState();
     return parseTopLevel(options.program);
-};
+}
+exports.parse = parse;
+;
 
 // A second optional argument can be given to further configure
 // the parser process. These options are recognized:
@@ -57,7 +61,7 @@ exports.defaultOptions = {
     // `forbidReserved` to enforce them. When this option has the
     // value "everywhere", reserved words and keywords can also not be
     // used as property names.
-    forbidReserved: false,
+    forbidReserved: "",
     // When enabled, a return at the top level is not considered an
     // error.
     allowReturnOutsideFunction: false,
@@ -71,7 +75,8 @@ exports.defaultOptions = {
     // format as tokenize() returns. Note that you are not
     // allowed to call the parser from the callback—that will
     // corrupt its internal state.
-    onToken: null,
+    onToken: function () {
+    },
     // A function can be passed as `onComment` option, which will
     // cause Acorn to call that function with `(block, text, start,
     // end)` parameters whenever a comment is skipped. `block` is a
@@ -82,7 +87,8 @@ exports.defaultOptions = {
     // passed, the full `{line, column}` locations of the start and
     // end of the comments. Note that you are not allowed to call the
     // parser from the callback—that will corrupt its internal state.
-    onComment: null,
+    onComment: function () {
+    },
     // Nodes have their start and end characters offsets recorded in
     // `start` and `end` properties (directly on the node, rather than
     // the `loc` object, which holds line/column data. To also add a
@@ -91,7 +97,7 @@ exports.defaultOptions = {
     // `true`.
     //
     // [range]: https://bugzilla.mozilla.org/show_bug.cgi?id=745678
-    ranges: false,
+    ranges: true,
     // It is possible to parse multiple files into a single AST by
     // passing the tree produced by parsing the first file as
     // `program` option in subsequent parses. This will add the
@@ -140,8 +146,8 @@ var getCurrentToken = function () {
         value: tokVal,
         start: tokStart,
         end: tokEnd,
-        startLoc: 0,
-        endLoc: 0
+        startLoc: null,
+        endLoc: null
     };
     if (options.locations) {
         token.startLoc = tokStartLoc;
@@ -222,11 +228,7 @@ var tokCurLine, tokLineStart;
 // when finishing a node and assigning its `end` position.
 var lastStart, lastEnd, lastEndLoc;
 
-// This is the parser's state. `inFunction` is used to reject
-// `return` statements outside of functions, `inGenerator` to
-// reject `yield`s outside of generators, `labels` to verify
-// that `break` and `continue` have somewhere to jump to, and
-// `strict` indicates whether strict mode is on.
+
 var inFunction, inGenerator, labels, strict;
 
 // This counter is used for checking that arrow expressions did
@@ -254,7 +256,7 @@ function raise(pos, message) {
 // Reused empty array added for node fields that are always empty.
 var empty = [];
 
-// ## Token types
+
 // The assignment of fine-grained, information-carrying type objects
 // allows the tokenizer to store the information it has about a
 // token in a way that is very cheap for the parser to look up.
@@ -300,7 +302,7 @@ var _false = { keyword: "false", atomValue: false };
 var _in = { keyword: "in", binop: 7, beforeExpr: true };
 
 // Map keyword names to token types.
-var keywordTypes = {
+exports.keywordTypes = {
     "break": _break, "case": _case, "catch": _catch,
     "continue": _continue, "debugger": _debugger, "default": _default,
     "do": _do, "else": _else, "finally": _finally, "for": _for,
@@ -362,8 +364,8 @@ exports.tokTypes = {
     dot: _dot, ellipsis: _ellipsis, question: _question, slash: _slash, eq: _eq,
     name: _name, eof: _eof, num: _num, regexp: _regexp, string: _string,
     arrow: _arrow, bquote: _bquote, dollarBraceL: _dollarBraceL };
-for (var kw in keywordTypes)
-    exports.tokTypes["_" + kw] = keywordTypes[kw];
+for (var kw in exports.keywordTypes)
+    exports.tokTypes["_" + kw] = exports.keywordTypes[kw];
 
 // This is a trick taken from Esprima. It turns out that, on
 // non-Chrome browsers, to check whether a string is in a set, a
@@ -373,8 +375,8 @@ for (var kw in keywordTypes)
 // predicate from a space-separated string of words.
 //
 // It starts by sorting the words by length.
-function makePredicate(words) {
-    words = words.split(" ");
+function makePredicate(wordsinput) {
+    var words = wordsinput.split(" ");
     var f = "", cats = [];
     out:
     for (var i = 0; i < words.length; ++i) {
@@ -487,10 +489,14 @@ exports.isIdentifierChar = function (code) {
 // ## Tokenizer
 // These are used when `options.locations` is on, for the
 // `tokStartLoc` and `tokEndLoc` properties.
-function Position() {
-    this.line = tokCurLine;
-    this.column = tokPos - tokLineStart;
-}
+var Position = (function () {
+    function Position() {
+        this.line = tokCurLine;
+        this.column = tokPos - tokLineStart;
+    }
+    return Position;
+})();
+exports.Position = Position;
 
 // Reset the token state. Used at the start of a parse.
 function initTokenState() {
@@ -1142,7 +1148,7 @@ function readWord() {
     var word = readWord1();
     var type = _name;
     if (!containsEsc && isKeyword(word))
-        type = keywordTypes[word];
+        type = exports.keywordTypes[word];
     return finishToken(type, word);
 }
 
@@ -1189,22 +1195,31 @@ function setStrict(strct) {
 }
 
 // Start an AST node, attaching a start offset.
-function Node() {
-    this.type = null;
-    this.start = tokStart;
-    this.end = null;
-}
-exports.Node = Node;
+var SourceLocation = (function () {
+    function SourceLocation() {
+        this.start = tokStartLoc;
+        this.end = null;
+        if (sourceFile !== null)
+            this.source = sourceFile;
+    }
+    return SourceLocation;
+})();
+exports.SourceLocation = SourceLocation;
+;
 
-function SourceLocation() {
-    this.start = tokStartLoc;
-    this.end = null;
-    if (sourceFile !== null)
-        this.source = sourceFile;
-}
+var Node = (function () {
+    function Node() {
+        this.type = null;
+        this.start = tokStart;
+        this.end = null;
+    }
+    return Node;
+})();
+exports.Node = Node;
+;
 
 function startNode() {
-    var node = new exports.Node();
+    var node = new Node();
     if (options.locations)
         node.loc = new SourceLocation();
     if (options.directSourceFile)
@@ -1218,7 +1233,7 @@ function startNode() {
 // the start of another node. For example, a binary operator node is
 // only started after its left-hand side has already been parsed.
 function startNodeFrom(other) {
-    var node = new exports.Node();
+    var node = new Node();
     node.start = other.start;
     if (options.locations) {
         node.loc = new SourceLocation();
@@ -1441,10 +1456,10 @@ function parseTopLevel(program) {
 
     var node = program || startNode(), first = true;
     if (!program)
-        node.body = [];
+        node.bodylist = [];
     while (tokType !== _eof) {
         var stmt = parseStatement();
-        node.body.push(stmt);
+        node.bodylist.push(stmt);
         if (first && isUseStrict(stmt))
             setStrict(true);
         first = false;
@@ -1750,11 +1765,11 @@ function parseParenExpression() {
 // function bodies).
 function parseBlock(allowStrict) {
     var node = startNode(), first = true, strict = false, oldStrict;
-    node.body = [];
+    node.bodylist = [];
     expect(_braceL);
     while (!eat(_braceR)) {
         var stmt = parseStatement();
-        node.body.push(stmt);
+        node.bodylist.push(stmt);
         if (first && allowStrict && isUseStrict(stmt)) {
             oldStrict = strict;
             setStrict(strict = true);
@@ -2308,7 +2323,7 @@ function parseFunctionBody(node, allowExpression) {
     // If this is a strict mode function, verify that argument names
     // are not repeated, and it does not try to bind the words `eval`
     // or `arguments`.
-    if (strict || !isExpression && node.body.body.length && isUseStrict(node.body.body[0])) {
+    if (strict || !isExpression && node.body.bodylist.length && isUseStrict(node.body.bodylist[0])) {
         var nameHash = {};
         if (node.id)
             checkFunctionParam(node.id, nameHash);
@@ -2326,15 +2341,15 @@ function parseClass(node, isStatement) {
     node.id = tokType === _name ? parseIdent() : isStatement ? unexpected() : null;
     node.superClass = eat(_extends) ? parseExpression() : null;
     var classBody = startNode(), methodHash = {}, staticMethodHash = {};
-    classBody.body = [];
+    classBody.bodylist = [];
     expect(_braceL);
     while (!eat(_braceR)) {
         var method = startNode();
         if (tokType === _name && tokVal === "static") {
             next();
-            method['static'] = true;
+            method.static = true;
         } else {
-            method['static'] = false;
+            method.static = false;
         }
         var isGenerator = eat(_star);
         parsePropertyName(method);
@@ -2347,8 +2362,8 @@ function parseClass(node, isStatement) {
             method.kind = "";
         }
         method.value = parseMethod(isGenerator);
-        checkPropClash(method, method['static'] ? staticMethodHash : methodHash);
-        classBody.body.push(finishNode(method, "MethodDefinition"));
+        checkPropClash(method, method.static ? staticMethodHash : methodHash);
+        classBody.bodylist.push(finishNode(method, "MethodDefinition"));
         eat(_semi);
     }
     node.body = finishNode(classBody, "ClassBody");
@@ -2406,13 +2421,13 @@ function parseExport(node) {
     // export var|const|let|function|class ...;
     if (tokType === _var || tokType === _const || tokType === _let || tokType === _function || tokType === _class) {
         node.declaration = parseStatement();
-        node['default'] = false;
+        node.default = false;
         node.specifiers = null;
         node.source = null;
     } else // export default ...;
     if (eat(_default)) {
         node.declaration = parseExpression(true);
-        node['default'] = true;
+        node.default = true;
         node.specifiers = null;
         node.source = null;
         semicolon();
@@ -2421,11 +2436,11 @@ function parseExport(node) {
         // export { x, y as z } [from '...']
         var isBatch = tokType === _star;
         node.declaration = null;
-        node['default'] = false;
+        node.default = false;
         node.specifiers = parseExportSpecifiers();
         if (tokType === _name && tokVal === "from") {
             next();
-            node.source = tokType === _string ? parseExprAtom() : unexpected();
+            node.source = tokType === _string ? parseExprAtom() : void (unexpected());
         } else {
             if (isBatch)
                 unexpected();
@@ -2482,11 +2497,11 @@ function parseImport(node) {
         if (tokType !== _name || tokVal !== "from")
             unexpected();
         next();
-        node.source = tokType === _string ? parseExprAtom() : unexpected();
+        node.source = tokType === _string ? parseExprAtom() : void (unexpected());
 
         // only for backward compatibility with Esprima's AST
         // (it doesn't support mixed default + named yet)
-        node.kind = node.specifiers[0]['default'] ? "default" : "named";
+        node.kind = node.specifiers[0].default ? "default" : "named";
     }
     return finishNode(node, "ImportDeclaration");
 }
@@ -2511,7 +2526,7 @@ function parseImportSpecifiers() {
         node.id = parseIdent();
         checkLVal(node.id, true);
         node.name = null;
-        node['default'] = true;
+        node.default = true;
         nodes.push(finishNode(node, "ImportSpecifier"));
         if (!eat(_comma))
             return nodes;
@@ -2534,7 +2549,7 @@ function parseImportSpecifiers() {
             node.name = null;
         }
         checkLVal(node.name || node.id, true);
-        node['default'] = false;
+        node.default = false;
         nodes.push(finishNode(node, "ImportSpecifier"));
     }
     return nodes;

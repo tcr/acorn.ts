@@ -49,7 +49,7 @@ if (typeof exports != "undefined") {
 
 test("\"\\u{714E}\\u{8336}\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -80,7 +80,7 @@ test("\"\\u{714E}\\u{8336}\"", {
 
 test("\"\\u{20BB7}\\u{91CE}\\u{5BB6}\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -113,7 +113,7 @@ test("\"\\u{20BB7}\\u{91CE}\\u{5BB6}\"", {
 
 test("00", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -144,7 +144,7 @@ test("00", {
 
 test("0o0", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -175,7 +175,7 @@ test("0o0", {
 
 test("function test() {'use strict'; 0o0; }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -190,7 +190,7 @@ test("function test() {'use strict'; 0o0; }", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ExpressionStatement",
           expression: {
@@ -256,7 +256,7 @@ test("function test() {'use strict'; 0o0; }", {
 
 test("0o2", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -287,7 +287,7 @@ test("0o2", {
 
 test("0o12", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -318,7 +318,7 @@ test("0o12", {
 
 test("0O0", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -349,7 +349,7 @@ test("0O0", {
 
 test("function test() {'use strict'; 0O0; }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -364,7 +364,7 @@ test("function test() {'use strict'; 0O0; }", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [
+      bodylist: [
         {
           type: "ExpressionStatement",
           expression: {
@@ -430,7 +430,7 @@ test("function test() {'use strict'; 0O0; }", {
 
 test("0O2", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -461,7 +461,7 @@ test("0O2", {
 
 test("0O12", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -492,7 +492,7 @@ test("0O12", {
 
 test("0b0", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -523,7 +523,7 @@ test("0b0", {
 
 test("0b1", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -554,7 +554,7 @@ test("0b1", {
 
 test("0b10", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -585,7 +585,7 @@ test("0b10", {
 
 test("0B0", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -616,7 +616,7 @@ test("0B0", {
 
 test("0B1", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -647,7 +647,7 @@ test("0B1", {
 
 test("0B10", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "Literal",
@@ -680,7 +680,7 @@ test("0B10", {
 
 test("`42`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TemplateLiteral",
@@ -720,7 +720,7 @@ test("`42`", {
 
 test("raw`42`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TaggedTemplateExpression",
@@ -777,7 +777,7 @@ test("raw`42`", {
 
 test("raw`hello ${name}`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TaggedTemplateExpression",
@@ -854,7 +854,7 @@ test("raw`hello ${name}`", {
 
 test("`$`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TemplateLiteral",
@@ -894,7 +894,7 @@ test("`$`", {
 
 test("`\\n\\r\\b\\v\\t\\f\\\n\\\r\n`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TemplateLiteral",
@@ -934,7 +934,7 @@ test("`\\n\\r\\b\\v\\t\\f\\\n\\\r\n`", {
 
 test("`\n\r\n`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TemplateLiteral",
@@ -974,7 +974,7 @@ test("`\n\r\n`", {
 
 test("`\\u{000042}\\u0042\\x42u0\\102\\A`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "TemplateLiteral",
@@ -1014,7 +1014,7 @@ test("`\\u{000042}\\u0042\\x42u0\\102\\A`", {
 
 test("new raw`42`", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "NewExpression",
@@ -1082,7 +1082,7 @@ test("new raw`42`", {
 
 test("switch (answer) { case 42: let t = 42; break; }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "SwitchStatement",
     discriminant: {
       type: "Identifier",
@@ -1179,7 +1179,7 @@ test("switch (answer) { case 42: let t = 42; break; }", {
 
 test("() => \"test\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1224,7 +1224,7 @@ test("() => \"test\"", {
 
 test("e => \"test\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1277,7 +1277,7 @@ test("e => \"test\"", {
 
 test("(e) => \"test\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1330,7 +1330,7 @@ test("(e) => \"test\"", {
 
 test("(a, b) => \"test\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1394,7 +1394,7 @@ test("(a, b) => \"test\"", {
 
 test("e => { 42; }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1411,7 +1411,7 @@ test("e => { 42; }", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "ExpressionStatement",
           expression: {
             type: "Literal",
@@ -1463,7 +1463,7 @@ test("e => { 42; }", {
 
 test("e => ({ property: 42 })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1545,7 +1545,7 @@ test("e => ({ property: 42 })", {
 
 test("e => { label: 42 }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1562,7 +1562,7 @@ test("e => { label: 42 }", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "LabeledStatement",
           label: {
             type: "Identifier",
@@ -1631,7 +1631,7 @@ test("e => { label: 42 }", {
 
 test("(a, b) => { 42; }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1659,7 +1659,7 @@ test("(a, b) => { 42; }", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "ExpressionStatement",
           expression: {
             type: "Literal",
@@ -1711,7 +1711,7 @@ test("(a, b) => { 42; }", {
 
 test("([a, , b]) => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1784,7 +1784,7 @@ test("([a, , b]) => 42", {
 
 test("([a.a]) => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1863,7 +1863,7 @@ test("([a.a]) => 42", {
 
 test("(x=1) => x * x", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1942,7 +1942,7 @@ test("(x=1) => x * x", {
 
 test("eval => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -1995,7 +1995,7 @@ test("eval => 42", {
 
 test("arguments => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2048,7 +2048,7 @@ test("arguments => 42", {
 
 test("(a) => 00", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2101,7 +2101,7 @@ test("(a) => 00", {
 
 test("(eval, a) => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2165,7 +2165,7 @@ test("(eval, a) => 42", {
 
 test("(eval = 10) => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2227,7 +2227,7 @@ test("(eval = 10) => 42", {
 
 test("(eval, a = 10) => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2303,7 +2303,7 @@ test("(eval, a = 10) => 42", {
 
 test("(x => x)", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2355,7 +2355,7 @@ test("(x => x)", {
 
 test("x => y => 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2430,7 +2430,7 @@ test("x => y => 42", {
 
 test("(x) => ((y, z) => (x, y, z))", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -2543,7 +2543,7 @@ test("(x) => ((y, z) => (x, y, z))", {
 
 test("foo(() => {})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "CallExpression",
@@ -2563,7 +2563,7 @@ test("foo(() => {})", {
         defaults: [],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           range: [10, 12],
           loc: {
             start: {line: 1, column: 10},
@@ -2604,7 +2604,7 @@ test("foo(() => {})", {
 
 test("foo((x, y) => {})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "CallExpression",
@@ -2643,7 +2643,7 @@ test("foo((x, y) => {})", {
         defaults: [],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           range: [14, 16],
           loc: {
             start: {line: 1, column: 14},
@@ -2689,7 +2689,7 @@ test("(a, a) => 42", {
     end: {line: 1, column: 12}
   },
   range: [0, 12],
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     loc: {
       start: {line: 1, column: 0},
@@ -2750,7 +2750,7 @@ test("(a, a) => 42", {
 
 test("x = { method() { } }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -2784,7 +2784,7 @@ test("x = { method() { } }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [15, 18],
               loc: {
                 start: {line: 1, column: 15},
@@ -2841,7 +2841,7 @@ test("x = { method() { } }", {
 
 test("x = { method(test) { } }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -2883,7 +2883,7 @@ test("x = { method(test) { } }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [19, 22],
               loc: {
                 start: {line: 1, column: 19},
@@ -2940,7 +2940,7 @@ test("x = { method(test) { } }", {
 
 test("x = { 'method'() { } }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -2975,7 +2975,7 @@ test("x = { 'method'() { } }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [17, 20],
               loc: {
                 start: {line: 1, column: 17},
@@ -3032,7 +3032,7 @@ test("x = { 'method'() { } }", {
 
 test("x = { get() { } }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -3066,7 +3066,7 @@ test("x = { get() { } }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [12, 15],
               loc: {
                 start: {line: 1, column: 12},
@@ -3123,7 +3123,7 @@ test("x = { get() { } }", {
 
 test("x = { set() { } }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -3157,7 +3157,7 @@ test("x = { set() { } }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [12, 15],
               loc: {
                 start: {line: 1, column: 12},
@@ -3214,7 +3214,7 @@ test("x = { set() { } }", {
 
 test("x = { method() 42 }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -3306,7 +3306,7 @@ test("x = { method() 42 }", {
 
 test("x = { get method() 42 }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -3398,7 +3398,7 @@ test("x = { get method() 42 }", {
 
 test("x = { set method(val) v = val }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -3517,7 +3517,7 @@ test("x = { set method(val) v = val }", {
 
 test("[for (x of array) x]", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ComprehensionExpression",
@@ -3584,7 +3584,7 @@ test("[for (x of array) x]", {
 
 test("[for (x of array) for (y of array2) if (x === test) x]", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ComprehensionExpression",
@@ -3706,7 +3706,7 @@ test("[for (x of array) for (y of array2) if (x === test) x]", {
 
 test("(for (x of array) for (y of array2) if (x === test) x)", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ComprehensionExpression",
@@ -3828,7 +3828,7 @@ test("(for (x of array) for (y of array2) if (x === test) x)", {
 
 test("[for ([,x] of array) for ({[start.x]: x, [start.y]: y} of array2) x]", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ComprehensionExpression",
@@ -4034,7 +4034,7 @@ test("[for ([,x] of array) for ({[start.x]: x, [start.y]: y} of array2) x]", {
 
 test("x = { y, z }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -4145,7 +4145,7 @@ test("x = { y, z }", {
 
 test("[a, b] = [b, a]", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -4231,7 +4231,7 @@ test("[a, b] = [b, a]", {
 
 test("({ responseText: text }) = res", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -4308,7 +4308,7 @@ test("({ responseText: text }) = res", {
 
 test("const {a} = {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4385,7 +4385,7 @@ test("const {a} = {}", {
 
 test("const [a] = []", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4441,7 +4441,7 @@ test("const [a] = []", {
 
 test("let {a} = {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4518,7 +4518,7 @@ test("let {a} = {}", {
 
 test("let [a] = []", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4574,7 +4574,7 @@ test("let [a] = []", {
 
 test("var {a} = {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4651,7 +4651,7 @@ test("var {a} = {}", {
 
 test("var [a] = []", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4707,7 +4707,7 @@ test("var [a] = []", {
 
 test("const {a:b} = {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4784,7 +4784,7 @@ test("const {a:b} = {}", {
 
 test("let {a:b} = {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4861,7 +4861,7 @@ test("let {a:b} = {}", {
 
 test("var {a:b} = {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -4940,7 +4940,7 @@ test("var {a:b} = {}", {
 
 test("export var document", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "VariableDeclaration",
@@ -4991,7 +4991,7 @@ test("export var document", {
 
 test("export var document = { }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "VariableDeclaration",
@@ -5050,7 +5050,7 @@ test("export var document = { }", {
 
 test("export let document", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "VariableDeclaration",
@@ -5101,7 +5101,7 @@ test("export let document", {
 
 test("export let document = { }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "VariableDeclaration",
@@ -5160,7 +5160,7 @@ test("export let document = { }", {
 
 test("export const document = { }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "VariableDeclaration",
@@ -5219,7 +5219,7 @@ test("export const document = { }", {
 
 test("export function parse() { }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "FunctionDeclaration",
@@ -5236,7 +5236,7 @@ test("export function parse() { }", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [24, 27],
         loc: {
           start: {line: 1, column: 24},
@@ -5274,7 +5274,7 @@ test("export function parse() { }", {
 
 test("export class Class {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "ClassDeclaration",
@@ -5290,7 +5290,7 @@ test("export class Class {}", {
       superClass: null,
       body: {
         type: "ClassBody",
-        body: [],
+        bodylist: [],
         range: [19, 21],
         loc: {
           start: {line: 1, column: 19},
@@ -5325,7 +5325,7 @@ test("export class Class {}", {
 
 test("export default 42", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: {
       type: "Literal",
@@ -5361,7 +5361,7 @@ testFail("export *", "Unexpected token (1:8)", {ecmaVersion: 6});
 
 test("export * from \"crypto\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: null,
     specifiers: [{
@@ -5401,7 +5401,7 @@ test("export * from \"crypto\"", {
 
 test("export { encrypt }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: null,
     specifiers: [{
@@ -5442,7 +5442,7 @@ test("export { encrypt }", {
 
 test("export { encrypt, decrypt }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: null,
     specifiers: [
@@ -5503,7 +5503,7 @@ test("export { encrypt, decrypt }", {
 
 test("export { encrypt as default }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: null,
     specifiers: [{
@@ -5552,7 +5552,7 @@ test("export { encrypt as default }", {
 
 test("export { encrypt, decrypt as dec }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExportDeclaration",
     declaration: null,
     specifiers: [
@@ -5621,7 +5621,7 @@ test("export { encrypt, decrypt as dec }", {
 
 test("import \"jquery\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     specifiers: [],
     source: {
@@ -5653,7 +5653,7 @@ test("import \"jquery\"", {
 
 test("import $ from \"jquery\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     specifiers: [{
       type: "ImportSpecifier",
@@ -5703,7 +5703,7 @@ test("import $ from \"jquery\"", {
 
 test("import { encrypt, decrypt } from \"crypto\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     specifiers: [
       {
@@ -5773,7 +5773,7 @@ test("import { encrypt, decrypt } from \"crypto\"", {
 
 test("import { encrypt as enc } from \"crypto\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     specifiers: [{
       type: "ImportSpecifier",
@@ -5838,7 +5838,7 @@ test("import crypto, { decrypt, encrypt as enc } from \"crypto\"", {
     end: {line: 1, column: 56}
   },
   range: [0, 56],
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     start: 0,
     end: 56,
@@ -5952,7 +5952,7 @@ testFail("import default from \"foo\"", "Unexpected token (1:7)", {ecmaVersion: 
 
 test("import { null as nil } from \"bar\"", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     specifiers: [{
       type: "ImportSpecifier",
@@ -6017,7 +6017,7 @@ test("import * as crypto from \"crypto\"", {
     end: {line: 1, column: 32}
   },
   range: [0, 32],
-  body: [{
+  bodylist: [{
     type: "ImportDeclaration",
     start: 0,
     end: 32,
@@ -6071,7 +6071,7 @@ test("import * as crypto from \"crypto\"", {
 
 test("(function* () { yield v })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -6080,7 +6080,7 @@ test("(function* () { yield v })", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "ExpressionStatement",
           expression: {
             type: "YieldExpression",
@@ -6140,7 +6140,7 @@ test("(function* () { yield v })", {
 
 test("(function* () { yield\nv })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -6149,7 +6149,7 @@ test("(function* () { yield\nv })", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [
+        bodylist: [
           {
             type: "ExpressionStatement",
             expression: {
@@ -6220,7 +6220,7 @@ test("(function* () { yield\nv })", {
 
 test("(function* () { yield *v })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -6229,7 +6229,7 @@ test("(function* () { yield *v })", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "ExpressionStatement",
           expression: {
             type: "YieldExpression",
@@ -6289,7 +6289,7 @@ test("(function* () { yield *v })", {
 
 test("function* test () { yield *v }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -6304,7 +6304,7 @@ test("function* test () { yield *v }", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [{
+      bodylist: [{
         type: "ExpressionStatement",
         expression: {
           type: "YieldExpression",
@@ -6358,7 +6358,7 @@ test("function* test () { yield *v }", {
 
 test("var x = { *test () { yield *v } };", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -6391,7 +6391,7 @@ test("var x = { *test () { yield *v } };", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [{
+              bodylist: [{
                 type: "ExpressionStatement",
                 expression: {
                   type: "YieldExpression",
@@ -6474,7 +6474,7 @@ test("var x = { *test () { yield *v } };", {
 
 test("function* t() {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -6489,7 +6489,7 @@ test("function* t() {}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [14, 16],
       loc: {
         start: {line: 1, column: 14},
@@ -6518,7 +6518,7 @@ test("function* t() {}", {
 
 test("(function* () { yield yield 10 })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -6527,7 +6527,7 @@ test("(function* () { yield yield 10 })", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "ExpressionStatement",
           expression: {
             type: "YieldExpression",
@@ -6599,7 +6599,7 @@ test("(function* () { yield yield 10 })", {
 
 test("for(x of list) process(x);", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ForOfStatement",
     left: {
       type: "Identifier",
@@ -6672,7 +6672,7 @@ test("for(x of list) process(x);", {
 
 test("for (var x of list) process(x);", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ForOfStatement",
     left: {
       type: "VariableDeclaration",
@@ -6763,7 +6763,7 @@ test("for (var x of list) process(x);", {
 
 test("for (var x = 42 of list) process(x);", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ForOfStatement",
     left: {
       type: "VariableDeclaration",
@@ -6863,7 +6863,7 @@ test("for (var x = 42 of list) process(x);", {
 
 test("for (let x of list) process(x);", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ForOfStatement",
     left: {
       type: "VariableDeclaration",
@@ -6956,7 +6956,7 @@ test("for (let x of list) process(x);", {
 
 test("var A = class extends B {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -6982,7 +6982,7 @@ test("var A = class extends B {}", {
         },
         body: {
           type: "ClassBody",
-          body: [],
+          bodylist: [],
           range: [24, 26],
           loc: {
             start: {line: 1, column: 24},
@@ -7021,7 +7021,7 @@ test("var A = class extends B {}", {
 
 test("class A extends class B extends C {} {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7054,7 +7054,7 @@ test("class A extends class B extends C {} {}", {
       },
       body: {
         type: "ClassBody",
-        body: [],
+        bodylist: [],
         range: [34, 36],
         loc: {
           start: {line: 1, column: 34},
@@ -7069,7 +7069,7 @@ test("class A extends class B extends C {} {}", {
     },
     body: {
       type: "ClassBody",
-      body: [],
+      bodylist: [],
       range: [37, 39],
       loc: {
         start: {line: 1, column: 37},
@@ -7095,7 +7095,7 @@ test("class A extends class B extends C {} {}", {
 
 test("class A {get() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7109,7 +7109,7 @@ test("class A {get() {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7128,7 +7128,7 @@ test("class A {get() {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [15, 17],
             loc: {
               start: {line: 1, column: 15},
@@ -7177,7 +7177,7 @@ test("class A {get() {}}", {
 
 test("class A { static get() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7191,7 +7191,7 @@ test("class A { static get() {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7210,7 +7210,7 @@ test("class A { static get() {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [23, 25],
             loc: {
               start: {line: 1, column: 23},
@@ -7259,7 +7259,7 @@ test("class A { static get() {}}", {
 
 test("class A extends B {get foo() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7281,7 +7281,7 @@ test("class A extends B {get foo() {}}", {
     },
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7300,7 +7300,7 @@ test("class A extends B {get foo() {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [29, 31],
             loc: {
               start: {line: 1, column: 29},
@@ -7349,7 +7349,7 @@ test("class A extends B {get foo() {}}", {
 
 test("class A extends B { static get foo() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7371,7 +7371,7 @@ test("class A extends B { static get foo() {}}", {
     },
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7390,7 +7390,7 @@ test("class A extends B { static get foo() {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [37, 39],
             loc: {
               start: {line: 1, column: 37},
@@ -7439,7 +7439,7 @@ test("class A extends B { static get foo() {}}", {
 
 test("class A {set a(v) {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7453,7 +7453,7 @@ test("class A {set a(v) {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7480,7 +7480,7 @@ test("class A {set a(v) {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [18, 20],
             loc: {
               start: {line: 1, column: 18},
@@ -7529,7 +7529,7 @@ test("class A {set a(v) {}}", {
 
 test("class A { static set a(v) {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7543,7 +7543,7 @@ test("class A { static set a(v) {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7570,7 +7570,7 @@ test("class A { static set a(v) {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [26, 28],
             loc: {
               start: {line: 1, column: 26},
@@ -7619,7 +7619,7 @@ test("class A { static set a(v) {}}", {
 
 test("class A {set(v) {};}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7633,7 +7633,7 @@ test("class A {set(v) {};}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7660,7 +7660,7 @@ test("class A {set(v) {};}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [16, 18],
             loc: {
               start: {line: 1, column: 16},
@@ -7709,7 +7709,7 @@ test("class A {set(v) {};}", {
 
 test("class A { static set(v) {};}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7723,7 +7723,7 @@ test("class A { static set(v) {};}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7750,7 +7750,7 @@ test("class A { static set(v) {};}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [24, 26],
             loc: {
               start: {line: 1, column: 24},
@@ -7799,7 +7799,7 @@ test("class A { static set(v) {};}", {
 
 test("class A {*gen(v) { yield v; }}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7813,7 +7813,7 @@ test("class A {*gen(v) { yield v; }}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7840,7 +7840,7 @@ test("class A {*gen(v) { yield v; }}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [{
+            bodylist: [{
               type: "ExpressionStatement",
               expression: {
                 type: "YieldExpression",
@@ -7914,7 +7914,7 @@ test("class A {*gen(v) { yield v; }}", {
 
 test("class A { static *gen(v) { yield v; }}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -7928,7 +7928,7 @@ test("class A { static *gen(v) { yield v; }}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -7955,7 +7955,7 @@ test("class A { static *gen(v) { yield v; }}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [{
+            bodylist: [{
               type: "ExpressionStatement",
               expression: {
                 type: "YieldExpression",
@@ -8029,7 +8029,7 @@ test("class A { static *gen(v) { yield v; }}", {
 
 test("\"use strict\"; (class A {constructor() { super() }})", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8064,7 +8064,7 @@ test("\"use strict\"; (class A {constructor() { super() }})", {
         superClass: null,
         body: {
           type: "ClassBody",
-          body: [{
+          bodylist: [{
             type: "MethodDefinition",
             computed: false,
             key: {
@@ -8083,7 +8083,7 @@ test("\"use strict\"; (class A {constructor() { super() }})", {
               defaults: [],
               body: {
                 type: "BlockStatement",
-                body: [{
+                bodylist: [{
                   type: "ExpressionStatement",
                   expression: {
                     type: "CallExpression",
@@ -8164,7 +8164,7 @@ test("\"use strict\"; (class A {constructor() { super() }})", {
 
 test("class A {static foo() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -8178,7 +8178,7 @@ test("class A {static foo() {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         computed: false,
         key: {
@@ -8197,7 +8197,7 @@ test("class A {static foo() {}}", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [22, 24],
             loc: {
               start: {line: 1, column: 22},
@@ -8246,7 +8246,7 @@ test("class A {static foo() {}}", {
 
 test("class A {foo() {} static bar() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -8260,7 +8260,7 @@ test("class A {foo() {} static bar() {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -8280,7 +8280,7 @@ test("class A {foo() {} static bar() {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [15, 17],
               loc: {
                 start: {line: 1, column: 15},
@@ -8323,7 +8323,7 @@ test("class A {foo() {} static bar() {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [31, 33],
               loc: {
                 start: {line: 1, column: 31},
@@ -8373,7 +8373,7 @@ test("class A {foo() {} static bar() {}}", {
 
 test("\"use strict\"; (class A { static constructor() { super() }})", {
   type: "Program",
-  body: [
+  bodylist: [
     {
       type: "ExpressionStatement",
       expression: {
@@ -8408,7 +8408,7 @@ test("\"use strict\"; (class A { static constructor() { super() }})", {
         superClass: null,
         body: {
           type: "ClassBody",
-          body: [{
+          bodylist: [{
             type: "MethodDefinition",
             computed: false,
             key: {
@@ -8427,7 +8427,7 @@ test("\"use strict\"; (class A { static constructor() { super() }})", {
               defaults: [],
               body: {
                 type: "BlockStatement",
-                body: [{
+                bodylist: [{
                   type: "ExpressionStatement",
                   expression: {
                     type: "CallExpression",
@@ -8508,7 +8508,7 @@ test("\"use strict\"; (class A { static constructor() { super() }})", {
 
 test("class A { foo() {} bar() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -8522,7 +8522,7 @@ test("class A { foo() {} bar() {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -8542,7 +8542,7 @@ test("class A { foo() {} bar() {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [16, 18],
               loc: {
                 start: {line: 1, column: 16},
@@ -8585,7 +8585,7 @@ test("class A { foo() {} bar() {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [25, 27],
               loc: {
                 start: {line: 1, column: 25},
@@ -8635,7 +8635,7 @@ test("class A { foo() {} bar() {}}", {
 
 test("class A { get foo() {} set foo(v) {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -8649,7 +8649,7 @@ test("class A { get foo() {} set foo(v) {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -8669,7 +8669,7 @@ test("class A { get foo() {} set foo(v) {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [20, 22],
               loc: {
                 start: {line: 1, column: 20},
@@ -8720,7 +8720,7 @@ test("class A { get foo() {} set foo(v) {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [34, 36],
               loc: {
                 start: {line: 1, column: 34},
@@ -8770,7 +8770,7 @@ test("class A { get foo() {} set foo(v) {}}", {
 
 test("class A { static get foo() {} get foo() {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -8784,7 +8784,7 @@ test("class A { static get foo() {} get foo() {}}", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -8804,7 +8804,7 @@ test("class A { static get foo() {} get foo() {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [27, 29],
               loc: {
                 start: {line: 1, column: 27},
@@ -8847,7 +8847,7 @@ test("class A { static get foo() {} get foo() {}}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [40, 42],
               loc: {
                 start: {line: 1, column: 40},
@@ -8897,7 +8897,7 @@ test("class A { static get foo() {} get foo() {}}", {
 
 test("class A { static get foo() {} static get bar() {} }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -8911,7 +8911,7 @@ test("class A { static get foo() {} static get bar() {} }", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -8931,7 +8931,7 @@ test("class A { static get foo() {} static get bar() {} }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [27, 29],
               loc: {
                 start: {line: 1, column: 27},
@@ -8974,7 +8974,7 @@ test("class A { static get foo() {} static get bar() {} }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [47, 49],
               loc: {
                 start: {line: 1, column: 47},
@@ -9024,7 +9024,7 @@ test("class A { static get foo() {} static get bar() {} }", {
 
 test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v) {}}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -9038,7 +9038,7 @@ test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v)
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -9058,7 +9058,7 @@ test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v)
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [27, 29],
               loc: {
                 start: {line: 1, column: 27},
@@ -9109,7 +9109,7 @@ test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v)
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [48, 50],
               loc: {
                 start: {line: 1, column: 48},
@@ -9152,7 +9152,7 @@ test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v)
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [61, 63],
               loc: {
                 start: {line: 1, column: 61},
@@ -9203,7 +9203,7 @@ test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v)
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [75, 77],
               loc: {
                 start: {line: 1, column: 75},
@@ -9253,7 +9253,7 @@ test("class A { static get foo() {} static set foo(v) {} get foo() {} set foo(v)
 
 test("class A { set foo(v) {} get foo() {} }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     id: {
       type: "Identifier",
@@ -9267,7 +9267,7 @@ test("class A { set foo(v) {} get foo() {} }", {
     superClass: null,
     body: {
       type: "ClassBody",
-      body: [
+      bodylist: [
         {
           type: "MethodDefinition",
           computed: false,
@@ -9295,7 +9295,7 @@ test("class A { set foo(v) {} get foo() {} }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [21, 23],
               loc: {
                 start: {line: 1, column: 21},
@@ -9338,7 +9338,7 @@ test("class A { set foo(v) {} get foo() {} }", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [34, 36],
               loc: {
                 start: {line: 1, column: 34},
@@ -9402,7 +9402,7 @@ testFail("class A { foo() {} set foo(v) {} }", "Redefinition of property (1:23)"
 
 test("({[x]: 10})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -9462,7 +9462,7 @@ test("({[x]: 10})", {
 
 test("({[\"x\" + \"y\"]: 10})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -9542,7 +9542,7 @@ test("({[\"x\" + \"y\"]: 10})", {
 
 test("({[x]: function() {}})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -9564,7 +9564,7 @@ test("({[x]: function() {}})", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [18, 20],
             loc: {
               start: {line: 1, column: 18},
@@ -9615,7 +9615,7 @@ test("({[x]: function() {}})", {
 
 test("({[x]: 10, y: 20})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -9708,7 +9708,7 @@ test("({[x]: 10, y: 20})", {
 
 test("({get [x]() {}, set [x](v) {}})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -9731,7 +9731,7 @@ test("({get [x]() {}, set [x](v) {}})", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [12, 14],
               loc: {
                 start: {line: 1, column: 12},
@@ -9783,7 +9783,7 @@ test("({get [x]() {}, set [x](v) {}})", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [27, 29],
               loc: {
                 start: {line: 1, column: 27},
@@ -9835,7 +9835,7 @@ test("({get [x]() {}, set [x](v) {}})", {
 
 test("({[x]() {}})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -9857,7 +9857,7 @@ test("({[x]() {}})", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [8, 10],
             loc: {
               start: {line: 1, column: 8},
@@ -9908,7 +9908,7 @@ test("({[x]() {}})", {
 
 test("var {[x]: y} = {y}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -10014,7 +10014,7 @@ test("var {[x]: y} = {y}", {
 
 test("function f({[x]: y}) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -10066,7 +10066,7 @@ test("function f({[x]: y}) {}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [21, 23],
       loc: {
         start: {line: 1, column: 21},
@@ -10095,7 +10095,7 @@ test("function f({[x]: y}) {}", {
 
 test("var x = {*[test]() { yield *v; }}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -10128,7 +10128,7 @@ test("var x = {*[test]() { yield *v; }}", {
             defaults: [],
             body: {
               type: "BlockStatement",
-              body: [{
+              bodylist: [{
                 type: "ExpressionStatement",
                 expression: {
                   type: "YieldExpression",
@@ -10218,7 +10218,7 @@ test("class A {[x]() {}}", {
     end: {line: 1, column: 18}
   },
   range: [0, 18],
-  body: [{
+  bodylist: [{
     type: "ClassDeclaration",
     start: 0,
     end: 18,
@@ -10248,7 +10248,7 @@ test("class A {[x]() {}}", {
         end: {line: 1, column: 18}
       },
       range: [8, 18],
-      body: [{
+      bodylist: [{
         type: "MethodDefinition",
         start: 9,
         end: 17,
@@ -10294,7 +10294,7 @@ test("class A {[x]() {}}", {
               end: {line: 1, column: 17}
             },
             range: [15, 17],
-            body: []
+            bodylist: []
           },
           expression: false
         }
@@ -10313,7 +10313,7 @@ testFail("({[x]})", "Unexpected token (1:5)", {ecmaVersion: 6});
 
 test("function f([x] = [1]) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -10361,7 +10361,7 @@ test("function f([x] = [1]) {}", {
     }],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [22, 24],
       loc: {
         start: {line: 1, column: 22},
@@ -10390,7 +10390,7 @@ test("function f([x] = [1]) {}", {
 
 test("function f({x} = {x: 10}) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -10480,7 +10480,7 @@ test("function f({x} = {x: 10}) {}", {
     }],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [26, 28],
       loc: {
         start: {line: 1, column: 26},
@@ -10509,7 +10509,7 @@ test("function f({x} = {x: 10}) {}", {
 
 test("f = function({x} = {x: 10}) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -10605,7 +10605,7 @@ test("f = function({x} = {x: 10}) {}", {
         }],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           range: [28, 30],
           loc: {
             start: {line: 1, column: 28},
@@ -10646,7 +10646,7 @@ test("f = function({x} = {x: 10}) {}", {
 
 test("({f: function({x} = {x: 10}) {}})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -10743,7 +10743,7 @@ test("({f: function({x} = {x: 10}) {}})", {
           }],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [29, 31],
             loc: {
               start: {line: 1, column: 29},
@@ -10794,7 +10794,7 @@ test("({f: function({x} = {x: 10}) {}})", {
 
 test("({f({x} = {x: 10}) {}})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -10891,7 +10891,7 @@ test("({f({x} = {x: 10}) {}})", {
           }],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [19, 21],
             loc: {
               start: {line: 1, column: 19},
@@ -10942,14 +10942,14 @@ test("({f({x} = {x: 10}) {}})", {
 
 test("(class {f({x} = {x: 10}) {}})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ClassExpression",
       superClass: null,
       body: {
         type: "ClassBody",
-        body: [{
+        bodylist: [{
           type: "MethodDefinition",
           computed: false,
           key: {
@@ -11043,7 +11043,7 @@ test("(class {f({x} = {x: 10}) {}})", {
             }],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [25, 27],
               loc: {
                 start: {line: 1, column: 25},
@@ -11098,7 +11098,7 @@ test("(class {f({x} = {x: 10}) {}})", {
 
 test("(({x} = {x: 10}) => {})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -11182,7 +11182,7 @@ test("(({x} = {x: 10}) => {})", {
       }],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [20, 22],
         loc: {
           start: {line: 1, column: 20},
@@ -11217,7 +11217,7 @@ test("(({x} = {x: 10}) => {})", {
 
 test("x = function(y = 1) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -11255,7 +11255,7 @@ test("x = function(y = 1) {}", {
         }],
         body: {
           type: "BlockStatement",
-          body: [],
+          bodylist: [],
           range: [20, 22],
           loc: {
             start: {line: 1, column: 20},
@@ -11296,7 +11296,7 @@ test("x = function(y = 1) {}", {
 
 test("function f(a = 1) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -11328,7 +11328,7 @@ test("function f(a = 1) {}", {
     }],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [18, 20],
       loc: {
         start: {line: 1, column: 18},
@@ -11357,7 +11357,7 @@ test("function f(a = 1) {}", {
 
 test("x = { f: function(a=1) {} }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -11408,7 +11408,7 @@ test("x = { f: function(a=1) {} }", {
             }],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [23, 25],
               loc: {
                 start: {line: 1, column: 23},
@@ -11465,7 +11465,7 @@ test("x = { f: function(a=1) {} }", {
 
 test("x = { f(a=1) {} }", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -11516,7 +11516,7 @@ test("x = { f(a=1) {} }", {
             }],
             body: {
               type: "BlockStatement",
-              body: [],
+              bodylist: [],
               range: [13, 15],
               loc: {
                 start: {line: 1, column: 13},
@@ -11575,7 +11575,7 @@ test("x = { f(a=1) {} }", {
 
 test("function f(a, ...b) {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -11598,7 +11598,7 @@ test("function f(a, ...b) {}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [20, 22],
       loc: {
         start: {line: 1, column: 20},
@@ -11637,7 +11637,7 @@ test("function f(a, ...b) {}", {
 
 test("function x([ a, b ]){}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -11679,7 +11679,7 @@ test("function x([ a, b ]){}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [20, 22],
       loc: {
         start: {line: 1, column: 20},
@@ -11708,7 +11708,7 @@ test("function x([ a, b ]){}", {
 
 test("function x({ a, b }){}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -11792,7 +11792,7 @@ test("function x({ a, b }){}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [20, 22],
       loc: {
         start: {line: 1, column: 20},
@@ -11821,7 +11821,7 @@ test("function x({ a, b }){}", {
 
 test("function x(a, { a }){}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -11884,7 +11884,7 @@ test("function x(a, { a }){}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [20, 22],
       loc: {
         start: {line: 1, column: 20},
@@ -11913,7 +11913,7 @@ test("function x(a, { a }){}", {
 
 test("function x(...[ a, b ]){}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -11928,7 +11928,7 @@ test("function x(...[ a, b ]){}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [23, 25],
       loc: {
         start: {line: 1, column: 23},
@@ -11984,7 +11984,7 @@ test("function x(...[ a, b ]){}", {
 
 test("function x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "FunctionDeclaration",
     id: {
       type: "Identifier",
@@ -12148,7 +12148,7 @@ test("function x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){}", {
     defaults: [],
     body: {
       type: "BlockStatement",
-      body: [],
+      bodylist: [],
       range: [52, 54],
       loc: {
         start: {line: 1, column: 52},
@@ -12213,7 +12213,7 @@ test("function x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){}", {
 
 test("(function x([ a, b ]){})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -12257,7 +12257,7 @@ test("(function x([ a, b ]){})", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [21, 23],
         loc: {
           start: {line: 1, column: 21},
@@ -12292,7 +12292,7 @@ test("(function x([ a, b ]){})", {
 
 test("(function x({ a, b }){})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -12378,7 +12378,7 @@ test("(function x({ a, b }){})", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [21, 23],
         loc: {
           start: {line: 1, column: 21},
@@ -12413,7 +12413,7 @@ test("(function x({ a, b }){})", {
 
 test("(function x(...[ a, b ]){})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -12430,7 +12430,7 @@ test("(function x(...[ a, b ]){})", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [24, 26],
         loc: {
           start: {line: 1, column: 24},
@@ -12492,7 +12492,7 @@ test("(function x(...[ a, b ]){})", {
 
 test("(function x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){})", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -12658,7 +12658,7 @@ test("(function x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){})", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [53, 55],
         loc: {
           start: {line: 1, column: 53},
@@ -12729,7 +12729,7 @@ test("(function x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){})", {
 
 test("({ x([ a, b ]){} })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -12778,7 +12778,7 @@ test("({ x([ a, b ]){} })", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [14, 16],
             loc: {
               start: {line: 1, column: 14},
@@ -12829,7 +12829,7 @@ test("({ x([ a, b ]){} })", {
 
 test("({ x(...[ a, b ]){} })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -12851,7 +12851,7 @@ test("({ x(...[ a, b ]){} })", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [17, 19],
             loc: {
               start: {line: 1, column: 17},
@@ -12929,7 +12929,7 @@ test("({ x(...[ a, b ]){} })", {
 
 test("({ x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){} })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ObjectExpression",
@@ -13100,7 +13100,7 @@ test("({ x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){} })", {
           defaults: [],
           body: {
             type: "BlockStatement",
-            body: [],
+            bodylist: [],
             range: [46, 48],
             loc: {
               start: {line: 1, column: 46},
@@ -13187,7 +13187,7 @@ test("({ x({ a: { w, x }, b: [y, z] }, ...[a, b, c]){} })", {
 
 test("(...a) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13196,7 +13196,7 @@ test("(...a) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [10, 12],
         loc: {
           start: {line: 1, column: 10},
@@ -13239,7 +13239,7 @@ test("(...a) => {}", {
 
 test("(a, ...b) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13256,7 +13256,7 @@ test("(a, ...b) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [13, 15],
         loc: {
           start: {line: 1, column: 13},
@@ -13299,7 +13299,7 @@ test("(a, ...b) => {}", {
 
 test("({ a }) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13345,7 +13345,7 @@ test("({ a }) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [11, 13],
         loc: {
           start: {line: 1, column: 11},
@@ -13380,7 +13380,7 @@ test("({ a }) => {}", {
 
 test("({ a }, ...b) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13426,7 +13426,7 @@ test("({ a }, ...b) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [17, 19],
         loc: {
           start: {line: 1, column: 17},
@@ -13469,7 +13469,7 @@ test("({ a }, ...b) => {}", {
 
 test("(...[a, b]) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13478,7 +13478,7 @@ test("(...[a, b]) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [15, 17],
         loc: {
           start: {line: 1, column: 15},
@@ -13540,7 +13540,7 @@ test("(...[a, b]) => {}", {
 
 test("(a, ...[b]) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13557,7 +13557,7 @@ test("(a, ...[b]) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [15, 17],
         loc: {
           start: {line: 1, column: 15},
@@ -13608,7 +13608,7 @@ test("(a, ...[b]) => {}", {
 
 test("({ a: [a, b] }, ...c) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13673,7 +13673,7 @@ test("({ a: [a, b] }, ...c) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [25, 27],
         loc: {
           start: {line: 1, column: 25},
@@ -13716,7 +13716,7 @@ test("({ a: [a, b] }, ...c) => {}", {
 
 test("({ a: b, c }, [d, e], ...f) => {}", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -13824,7 +13824,7 @@ test("({ a: b, c }, [d, e], ...f) => {}", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [],
+        bodylist: [],
         range: [31, 33],
         loc: {
           start: {line: 1, column: 31},
@@ -13869,7 +13869,7 @@ test("({ a: b, c }, [d, e], ...f) => {}", {
 
 test("[...a] = b", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -13933,7 +13933,7 @@ test("[...a] = b", {
 
 test("[a, ...b] = c", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -14008,7 +14008,7 @@ test("[a, ...b] = c", {
 
 test("[{ a, b }, ...c] = d", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -14144,7 +14144,7 @@ test("[{ a, b }, ...c] = d", {
 
 test("[a, ...[b, c]] = d", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "AssignmentExpression",
@@ -14238,7 +14238,7 @@ test("[a, ...[b, c]] = d", {
 
 test("var [...a] = b", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -14302,7 +14302,7 @@ test("var [...a] = b", {
 
 test("var [a, ...b] = c", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -14377,7 +14377,7 @@ test("var [a, ...b] = c", {
 
 test("var [{ a, b }, ...c] = d", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -14513,7 +14513,7 @@ test("var [{ a, b }, ...c] = d", {
 
 test("var [a, ...[b, c]] = d", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "VariableDeclaration",
     declarations: [{
       type: "VariableDeclarator",
@@ -14607,7 +14607,7 @@ test("var [a, ...[b, c]] = d", {
 
 test("func(...a)", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "CallExpression",
@@ -14662,7 +14662,7 @@ test("func(...a)", {
 
 test("func(a, ...b)", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "CallExpression",
@@ -14733,7 +14733,7 @@ test("func(...a, b)", {
     end: {line: 1, column: 13}
   },
   range: [0, 13],
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     loc: {
       start: {line: 1, column: 0},
@@ -14910,7 +14910,7 @@ testFail("yield 10", "Unexpected token (1:6)", {ecmaVersion: 6});
 
 test("yield* 10", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "BinaryExpression",
@@ -14959,7 +14959,7 @@ test("yield* 10", {
 
 test("e => yield* 10", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "ArrowFunctionExpression",
@@ -15032,7 +15032,7 @@ testFail("(function () { yield 10 })", "Unexpected token (1:21)", {ecmaVersion: 
 
 test("(function () { yield* 10 })", {
   type: "Program",
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     expression: {
       type: "FunctionExpression",
@@ -15041,7 +15041,7 @@ test("(function () { yield* 10 })", {
       defaults: [],
       body: {
         type: "BlockStatement",
-        body: [{
+        bodylist: [{
           type: "ExpressionStatement",
           expression: {
             type: "BinaryExpression",
@@ -15178,7 +15178,7 @@ test("[...a, ] = b", {
     end: {line: 1, column: 12}
   },
   range: [0, 12],
-  body: [{
+  bodylist: [{
     type: "ExpressionStatement",
     loc: {
       start: {line: 1, column: 0},
